@@ -11,7 +11,7 @@ const MovieDetailsModal = ({ isOpen, onClose, movie, onAddToCart }) => {
       // Movie details modal component
 
     <div className="fixed inset-0 bg-neutral-900 bg-opacity-80 flex justify-center items-center z-50">
-      <div className="bg-[#1f2937] w-3/4 md:w-3/4 lg:w-1/2 rounded shadow-lg flex border border-[#2b3341] p-5 relative">
+      <div className="bg-[#1f2937] w-11/12 md:w-3/4 lg:w-1/2 rounded shadow-lg flex border border-[#2b3341] p-5 relative max-h-80 lg:max-h-full overflow-y-auto h-full lg:h-auto">
         <button
         onClick={onClose}
         className="absolute top-0 right-2 text-gray-600 hover:text-gray-200 text-3xl"

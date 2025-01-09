@@ -15,8 +15,8 @@ export const CartProvider = ({ children }) => {
 
 //   Add item to cart
   const handleAddToCart = (item) => {
-    const index = cartItems.findIndex(el=>el.id == item.id );
-    if(index == -1){
+    const index = cartItems.findIndex(el=>el.id === item.id );
+    if(index === -1){
         setCartItems((prevItems) => [...prevItems, item]);
         setCartCount((prevCount) => prevCount + 1);
         setTotalAmount((prevAmount) => prevAmount + item.price);
@@ -33,7 +33,7 @@ export const CartProvider = ({ children }) => {
 //   Remove item from cart
   const removeFromCart = (item) => {
     const oldItems = JSON.parse(JSON.stringify(cartItems));
-    const index = oldItems.findIndex(el=>el.id == item.id );
+    const index = oldItems.findIndex(el=>el.id === item.id );
     if(index > -1){
         oldItems.splice(index, 1);
         setCartItems(oldItems);

@@ -1,13 +1,11 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import MovieCard from './MovieCard';
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { ImSpinner8 } from "react-icons/im";
 import MovieDetailsModal from './MovieDetailsModal';
 import { useCart } from './CartContext';
 import movies from '../movies.json';
 
 const MovieList = () => {
-  const [cartItems, setCartItems] = useState([]);
   const [loading, setLoading] = useState(false);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [selectedMovie, setSelectedMovie] = useState(null);
